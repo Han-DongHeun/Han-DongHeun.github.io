@@ -2,109 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Han DongHeun - Curriculum Vitae</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Han DongHeun | Curriculum Vitae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      background-color: #e9eef4;
-      color: #333;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 40px 50px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ddd;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
-    }
-    header p {
-      font-size: 1.1em;
-      color: #666;
-      margin: 5px 0;
-    }
-    header a {
-      color: #337ab7;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    header a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 40px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      animation: fadeIn 0.8s ease-in-out;
-    }
-    h2 {
-      border-left: 6px solid #337ab7;
-      padding-left: 15px;
-      color: #333;
-      font-size: 1.6em;
-      margin-bottom: 20px;
-    }
-    .sub-section {
-      margin-bottom: 20px;
-    }
-    .sub-section h3 {
-      margin: 0 0 5px;
-      color: #444;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .row > div {
-      flex: 1 1 45%;
-    }
-    a {
-      color: #337ab7;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 600px) {
-      .row > div {
-        flex: 1 1 100%;
-      }
-    }
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --light-bg: #f4f7fa;
+  --text: #2f2f2f;
+  --muted: #666;
+  --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--light-bg);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 60px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ddd;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  border-left: 4px solid var(--accent);
+  padding-left: 14px;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  margin: 10px 0 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.subtext {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ul {
+  padding-left: 1.4rem;
+  margin: 0.8rem 0 1.4rem;
+}
+
+ul li {
+  padding-left: 0.3rem;
+  margin-bottom: 10px;
+  line-height: 1.15;
+  position: relative;
+}
+
+ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: -1.2rem;
+  color: var(--accent);
+}
+
+.publication-title {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.publication-authors {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section-block {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.section-block p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 12px;
+  padding-left: 20px;
+  border-left: 3px solid var(--accent);
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -13px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.timeline-date {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.timeline-content {
+  background: #f9fbfd;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+}
+
+.timeline-content h3 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.timeline-content .institution {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.timeline-content ul li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  background: #f9fbfd;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  flex: 1 1 300px;
+}
+
+.contact-item i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  min-width: 20px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-card {
+  background: #f9fbfd;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--box-shadow);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.project-sub {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.project-card ul {
+  padding-left: 1.2rem;
+  margin-top: 12px;
+}
+
+.project-card ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
   </style>
 </head>
 <body>
@@ -112,114 +266,179 @@
     <header>
       <img src="profile.jpg" alt="Han DongHeun" class="profile-img">
       <h1>Han DongHeun</h1>
-      <p>PhD Student, Kyung Hee University, South Korea</p>
+      <p class="subtext">Ph.D. Candidate in Software Convergence, Kyung Hee University</p>
       <p>
-        <a href="http://iiixr.korea.ac.kr/" target="_blank"><i class="fas fa-flask"></i> IIIXR Lab</a>
-        |
+        <a href="http://iiixr.korea.ac.kr/" target="_blank"><i class="fas fa-flask"></i> IIIXR Lab</a> |
         <a href="https://www.linkedin.com/in/dongheun-han" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       </p>
     </header>
 
-    <section>
-      <h2><i class="fas fa-address-card"></i> Contact</h2>
-      <div class="row">
-        <div><strong><i class="fas fa-location-dot"></i> Location:</strong> South Korea / Seoul</div>
-        <div><strong><i class="fas fa-envelope"></i> Email:</strong> hand32@khu.ac.kr</div>
-      </div>
-    </section>
+<section>
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span><strong>Email:</strong> hand32@khu.ac.kr</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span><strong>Location:</strong> Seoul, South Korea</span>
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <div class="sub-section">
-        <h3>Kyung Hee University</h3>
-        <p><strong>PhD in Software Convergence</strong> (Sep 2022 – Aug 2026)</p>
-      </div>
-      <div class="sub-section">
-        <h3>Kyung Hee University</h3>
-        <p><strong>MS in Software Convergence</strong> (Mar 2021 – Aug 2022)</p>
-      </div>
-      <div class="sub-section">
-        <h3>Kyung Hee University</h3>
-        <p><strong>BS in Game Content</strong> (2017 – 2021)</p>
-        <p><em>Activities:</em> Member of Talmood Band (Drums, 37th Generation); Volunteer at Ko Euntae (Children's Charity)</p>
-      </div>
-    </section>
 
-    <section>
-      <h2><i class="fas fa-book"></i> Publications & Patents</h2>
-      <div class="sub-section">
-        <h3>Publications</h3>
+<section>
+  <h2>Education</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2022 – Present</div>
+      <div class="timeline-content">
+        <h3>Ph.D. in Software Convergence</h3>
+        <p class="institution">Kyung Hee University</p>
         <ul>
-          <li><strong>Shaping the Future of VR Hand Interactions:</strong> IEEE VR 2025 (Second Author)</li>
-          <li><strong>DAMO:</strong> ACM TOG, Oct 2024 (Third Author, IF=7.8, Q1)</li>
-          <li><strong>VR-HandNet:</strong> IEEE TVCG, Mar 2023 (First Author, IF=5.226, Q1)</li>
-          <li><strong>Gravity Control-Based Data Augmentation:</strong> Symmetry, May 2021 (First Author, IF=2.7, Q2)</li>
+          <li>Research focused on AI-driven agent, VR interaction systems, and human motion synthesis.</li>
         </ul>
       </div>
-      <div class="sub-section">
-        <h3>Patents</h3>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2021 – 2022</div>
+      <div class="timeline-content">
+        <h3>M.S. in Software Convergence</h3>
+        <p class="institution">Kyung Hee University</p>
         <ul>
-          <li><strong>Motion Generation Device for Virtual Hand:</strong> Patent No. 10-2023-0135078 (Filed Oct 2023)</li>
+          <li>Graduated with honors.</li>
+          <li>Specialized in physically-plausible hand manipulation in immersive environments.</li>
         </ul>
       </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2017 – 2021</div>
+      <div class="timeline-content">
+        <h3>B.S. in Game Content</h3>
+        <p class="institution">Kyung Hee University</p>
+        <ul>
+          <li>Game development and computer graphics.</li>
+          <li>Active in university band: stage planning, live sound, lighting, and event management.</li>
+          <li>Volunteer activities: 140+ hours across 18 visits through a children's outreach club.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section>
+      <h2>Publications</h2>
+<ul>
+  <li>
+    <span class="publication-title">
+      <strong>Shaping the Future of VR Hand Interactions: Lessons Learned from Modern Methods</strong>
+    </span><br>
+    <span class="publication-authors">
+      <strong>Han, D.</strong>, Lee, S., & Kim, J. (2025). <em>IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR)</em>
+    </span>
+  </li>
+  <li>
+    <span class="publication-title">
+      <strong>DAMO: A Deep Solver for Arbitrary Marker Configuration in Optical Motion Capture</strong>
+    </span><br>
+    <span class="publication-authors">
+      Choi, Y., <strong>Han, D.</strong>, & Kim, J. (2024). <em>ACM Transactions on Graphics, 43(5). (IF: 7.8, Q1)</em>
+    </span>
+  </li>
+  <li>
+    <span class="publication-title">
+      <strong>VR-HandNet: A Visually and Physically Plausible Hand Manipulation System in Virtual Reality</strong>
+    </span><br>
+    <span class="publication-authors">
+      <strong>Han, D.</strong>, & Kim, J. (2023). <em>IEEE Transactions on Visualization and Computer Graphics, 29(3). (IF: 5.226, Q1)</em>
+    </span>
+  </li>
+  <li>
+    <span class="publication-title">
+      <strong>Gravity Control-based Data Augmentation Technique for Improving VR User Activity Recognition</strong>
+    </span><br>
+    <span class="publication-authors">
+      <strong>Han, D.</strong>, et al. (2021). <em>Symmetry, 13(5). (IF: 2.7, Q2)</em>
+    </span>
+  </li>
+</ul>
     </section>
 
     <section>
-      <h2><i class="fas fa-trophy"></i> Awards</h2>
+      <h2>Patent</h2>
       <ul>
-        <li><strong>KCGS Ostem Paper Award:</strong> Jul 2023</li>
-        <li><strong>Outstanding Thesis Award, Kyung Hee Univ:</strong> Aug 2022</li>
+        <li><strong>Motion Generation for Virtual Hands using Controllers</strong><br><span class="subtext">KR Patent No. 10-2023-0135078, filed October 2023. Based on VR-HandNet architecture.</span></li>
       </ul>
     </section>
 
     <section>
-      <h2><i class="fas fa-code"></i> Skills</h2>
+      <h2>Awards</h2>
       <ul>
-        <li>R&D, AI, Python, VR, Character Animation</li>
+        <li><strong>Best Paper Award</strong> – Korea Computer Graphics Society, 2023</li>
+        <li><strong>Outstanding Thesis Award</strong> – Kyung Hee University, 2022</li>
+      </ul>
+    </section>
+
+<section>
+  <h2>Projects & Exhibitions</h2>
+  <div class="project-grid">
+
+    <!-- Teaching Assistant -->
+    <div class="project-card">
+      <h3>🧪 Teaching Assistant <span class="project-sub">Kyung Hee University (2020–2022)</span></h3>
+      <ul>
+        <li><strong>2020 Fall:</strong> Game PX Design (Unreal Engine 4) – 15-week curriculum</li>
+        <li><strong>2021 Spring:</strong> Game Graphics Programming – 2 OpenGL ES assignments</li>
+        <li><strong>2022 Spring:</strong> Game Engineering – IK demo/lecture (UE5)</li>
+        <li><strong>2022 Fall:</strong> Fundamentals of Game Engine – Full practical class design (UE5)</li>
+      </ul>
+    </div>
+
+    <!-- The Album Exhibition -->
+    <div class="project-card">
+      <h3>🎨 The Album Exhibition <span class="project-sub">Indie Multimedia Art (2021)</span></h3>
+      <ul>
+        <li>Curated a 3-day exhibition comparing artists to album tracks</li>
+        <li>Produced <strong>"All of Me"</strong>, a short narrative-driven game installation</li>
+        <li>Served as MC in artist talk program & handled full logistics</li>
+        <li><a href="https://www.instagram.com/thealbum_exhibition/" target="_blank">View Exhibition Details</a></li>
+      </ul>
+    </div>
+
+    <!-- Dictates Game -->
+    <div class="project-card">
+      <h3>🎮 Dictates <span class="project-sub">Indie Game Project (2019)</span></h3>
+      <ul>
+        <li>Solo project exploring <strong>"the banality of evil"</strong> via narrative gameplay</li>
+        <li>Selected for school indie game showcase</li>
+        <li>Handled all aspects: design, programming, scripting, narrative</li>
+        <li><a href="https://blog.naver.com/rudnfehdgus/221654626438" target="_blank">Game Devlog & Commentary</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Programming: Python, C#, C++, Go, GLSL</li>
+        <li>Frameworks: Unreal Engine, Unity, PyTorch, OpenGL</li>
+        <li>Expertise: VR Interaction Design, RL Agent, Distributed/Parallel Training, Motion Capture</li>
       </ul>
     </section>
 
     <section>
-      <h2><i class="fas fa-folder-open"></i> Projects</h2>
-      <div class="sub-section">
-        <h3>Teaching Assistant at Kyung Hee University</h3>
-        <p><em>Sep 2020 – Dec 2022</em></p>
-        <ul>
-          <li>Courses taught: Game PX Design, Game Graphics Programming, Game Engineering, Game Engine Fundamentals</li>
-        </ul>
-      </div>
-      <div class="sub-section">
-        <h3>The Album Exhibition</h3>
-        <p><em>Jul 2021 – Dec 2021</em></p>
-        <ul>
-          <li>Organized and participated in art-game exhibition "All of Me"</li>
-          <li><a href="https://www.instagram.com/thealbum_exhibition/" target="_blank">Instagram</a></li>
-        </ul>
-      </div>
-      <div class="sub-section">
-        <h3>Dictates Game</h3>
-        <p><em>Jul 2019 – Sep 2019</em></p>
-        <ul>
-          <li>Indie game on "The Banality of Evil", shown at university exhibition</li>
-          <li><a href="https://blog.naver.com/rudnfehdgus/221654626438" target="_blank">Blog Post</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2><i class="fas fa-language"></i> Languages</h2>
-      <div class="row">
-        <div><strong>English:</strong> Advanced (Fluent)</div>
-        <div><strong>Korean:</strong> Native</div>
-      </div>
-    </section>
-
-    <section>
-      <h2><i class="fas fa-gamepad"></i> Interests</h2>
-      <div class="row">
-        <div>Electronic Arts (EA)</div>
-        <div>Activision</div>
-      </div>
+      <h2>Languages</h2>
+      <ul>
+        <li><strong>Korean:</strong> Native</li>
+        <li><strong>English:</strong> Advanced, Professional Communication</li>
+      </ul>
     </section>
   </div>
 </body>
