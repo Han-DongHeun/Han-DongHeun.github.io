@@ -88,7 +88,7 @@ ul {
 }
 
 ul li {
-  padding-left: 0.3rem;
+  padding-left: 0.2rem;
   margin-bottom: 10px;
   line-height: 1.15;
   position: relative;
@@ -121,7 +121,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+.highlight {
+  font-weight: 600;
+  color: var(--accent-purple); /* or --accent-orange, etc. */
+}
 .section-block {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -256,11 +259,36 @@ a:hover {
 
 .project-card ul li {
   margin-bottom: 8px;
-  line-height: 1.6;
+  line-height: 1.4;
+}
+.fade-wrapper {
+  opacity: 0;
+  transition-delay: 0.2s;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+.fade-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const fade = document.querySelector('.fade-wrapper');
+    
+    // 강제로 리플로우 발생시킴 (스타일 적용 인식용)
+    void fade.offsetWidth;
+
+    // 다음 렌더 프레임에 클래스 적용 (부드럽고 확실하게 작동)
+    requestAnimationFrame(() => {
+      fade.classList.add('visible');
+    });
+  });
+</script>
+
 <body>
   <div class="container">
     <header>
@@ -273,6 +301,7 @@ a:hover {
       </p>
     </header>
 
+<div class="fade-wrapper">
 <section>
   <h2>Contact</h2>
   <div class="contact-grid">
@@ -339,7 +368,7 @@ a:hover {
       <strong>Shaping the Future of VR Hand Interactions: Lessons Learned from Modern Methods</strong>
     </span><br>
     <span class="publication-authors">
-      <strong>Han, D.</strong>, Lee, S., & Kim, J. (2025). <em>IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR)</em>
+      Kim, B., <strong>Han, D.</strong>, & Kang, H. (2025). <em>IEEE Conference on Virtual Reality and 3D User Interfaces (<span class="highlight">IEEE VR</span>)</em>
     </span>
   </li>
   <li>
@@ -347,7 +376,7 @@ a:hover {
       <strong>DAMO: A Deep Solver for Arbitrary Marker Configuration in Optical Motion Capture</strong>
     </span><br>
     <span class="publication-authors">
-      Choi, Y., <strong>Han, D.</strong>, & Kim, J. (2024). <em>ACM Transactions on Graphics, 43(5). (IF: 7.8, Q1)</em>
+      Kim, K., Seo, S., <strong>Han, D.</strong>, & Kang, H. (2024). <em>ACM Transactions on Graphics (<span class="highlight">TOG</span>), 43(5). (<span class="highlight">IF: 7.8, Q1</span>)</em>
     </span>
   </li>
   <li>
@@ -355,7 +384,7 @@ a:hover {
       <strong>VR-HandNet: A Visually and Physically Plausible Hand Manipulation System in Virtual Reality</strong>
     </span><br>
     <span class="publication-authors">
-      <strong>Han, D.</strong>, & Kim, J. (2023). <em>IEEE Transactions on Visualization and Computer Graphics, 29(3). (IF: 5.226, Q1)</em>
+      <strong>Han, D.</strong>, Lee, R., Kim, K., & Kang, H. (2023). <em>IEEE Transactions on Visualization and Computer Graphics (<span class="highlight">TVCG</span>), 29(3). (<span class="highlight">IF: 5.226, Q1</span>)</em>
     </span>
   </li>
   <li>
@@ -363,7 +392,7 @@ a:hover {
       <strong>Gravity Control-based Data Augmentation Technique for Improving VR User Activity Recognition</strong>
     </span><br>
     <span class="publication-authors">
-      <strong>Han, D.</strong>, et al. (2021). <em>Symmetry, 13(5). (IF: 2.7, Q2)</em>
+      <strong>Han, D.</strong>, Lee, C., & Kang, H. (2021). <em><span class="highlight">Symmetry</span>, 13(5). (<span class="highlight">IF: 2.7, Q2</span>)</em>
     </span>
   </li>
 </ul>
@@ -441,5 +470,6 @@ a:hover {
       </ul>
     </section>
   </div>
+</div>
 </body>
 </html>
